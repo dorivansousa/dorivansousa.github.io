@@ -2,12 +2,12 @@
 
 <html lang="pt-br">
     <head>
-        <title>Dorivan Silva Sousa NLW Heat</title>
+        <title>Dorivan Silva Sousa - NLW Heat</title>
         <link rel="stylesheet" href="style.css">
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">        
     </head>
     <body>
         <main>
@@ -19,30 +19,65 @@
                     <img src="./images/foto_pessoal.png" alt="Foto pessoal">
                 </div>
 
-                <h1>Dorivan Sousa</h1>
-                <a href="https://instagram.com/dorivansilvasousa">
+                <h1 id="userName">Dorivan Sousa</h1>
+                <a href="https://github.com/dorivansousa" target="_blank">
                     <img 
                       src="./images/github.svg" 
                       alt="icone github"
-                >dorivansilvasousa</a>
+                    >dorivansousa</a>
 
-                <p>Um desenvolvedor focado em se aperfeiçoar mais a cada dia</p>
+                <p>Um desenvolvedor focado em se aperfeiçoar mais e mais a cada dia</p>
 
-                <ul>
-                    <li><a href="youtube.com">
-                        <img src="./images/youtube.svg" alt="youtube.com" tagert="_blank"></a>
+                <ul id="socialMidias">
+                    <!-- <li class="github"><a href="https://github.com/dorivansousa" target="_blank">
+                        <img src="./images/github.svg" alt="github.com"></a>
+                    </li> -->
+                    <li class="youtube"><a href="https://youtube.com/dorivansousa" target="_blank">
+                        <img src="./images/youtube.svg" alt="youtube.com"></a>
                     </li>
-                    <li><a href="facebook.com">
-                        <img src="./images/facebook.svg" alt="facebook.com" tagert="_blank"></a>
+                    <li class="facebook"><a href="https://facebook.com/dorivansousa" target="_blank">
+                        <img src="./images/facebook.svg" alt="facebook.com"></a>
                     </li>                    
-                    <li><a href="instagram.com">
-                        <img src="./images/instagram.svg" alt="instagram.com" tagert="_blank"></a>
+                    <li class="instagram"><a href="https://instagram.com/dorivansilvasousa" target="_blank">
+                        <img src="./images/instagram.svg" alt="instagram.com"></a>
                     </li>                    
-                    <li><a href="twitter.com">
-                        <img src="./images/twitter.svg" alt="twitter.com" tagert="_blank"></a>
+                    <li class="twitter"><a href="https://twitter.com/dorivansousa" target="_blank">
+                        <img src="./images/twitter.svg" alt="twitter.com"></a>
                     </li>
                 </ul>
             </div>
         </main>
+        <script>
+            // const github="dorivansousa";
+            // const facebook="dorivansousa";
+            // const instagram="dorivansilvasousa";
+            // const twitter="dorivansousa";
+            
+            const links = {
+                github: "dorivansousa",
+                youtube: "dorivansousa",
+                facebook: "dorivansousa",
+                instagram: "dorivansousa.io",
+                twitter: "dorivansousa"
+            }
+
+            function changeSocialMediaLinks(){
+                // console.log(document.getElementById('userName').innerText);
+                // document.getElementById('userName').textContent = "Dorivan S Sousa";
+                // console.log(document.getElementById('userName').innerText);
+
+                for (let li of socialMidias.children) {
+                    const social = li.getAttribute('class');
+                    li.children[0].href = `https://${social}.com/${links[social]}`
+                }
+            }
+
+            changeSocialMediaLinks();  
+
+            //  https://youtube.com/dorivansousa
+            // https://facebook.com/dorivansousa
+            // https://instagram.com/dorivansousa.io
+            // https://twitter.com/dorivansousa
+        </script>         
     </body>
 </html>
