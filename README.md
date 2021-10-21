@@ -20,3 +20,6 @@ CSS -> Cascade Style Shet
     * relativa (%)
     * estática (px)
     * quebras
+
+JavaScript
+  DOM -> Document Object Model
